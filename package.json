@@ -1,0 +1,69 @@
+{
+  "name": "electron-react-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/electron.js",
+  "scripts": {
+    "start-react": "set PORT=3000 && react-scripts start",
+    "start-bash": "PORT=3000 react-scripts start",
+    "build-react": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "concurrently \"set BROWSER=NONE&&npm run start-react\" \"wait-on http://localhost:3000 && npx electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "npm run build-react",
+    "electron-pack": "electron-builder build -w",
+    "build": "npm run electron-pack"
+  },
+  "author": "Author",
+  "license": "",
+  "homepage": "./",
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "Product Name Here",
+    "copyright": "Copyright © Here",
+    "win": {
+      "target": [
+        "zip"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build"
+    ],
+    "directories": {
+      "buildResources": "build_assets"
+    },
+    "asarUnpack": "build/data",
+    "extraFiles": "README.md"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
+    "@testing-library/user-event": "^10.0.2",
+    "electron-is-dev": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "wait-on": "^4.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

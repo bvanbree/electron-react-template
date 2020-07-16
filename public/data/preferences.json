@@ -1,0 +1,9 @@
+{
+  "example": {
+    "wait_milliseconds": 300000
+  },
+  "languages": [{
+    "code": "en",
+    "local": "English"
+  }]
+}
