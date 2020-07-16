@@ -12,12 +12,11 @@ In the project directory, you can run:
 
 Launches a dev instance of the app with **electron**.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
 ### `npm run build`
 
 Builds the **react** app for production and then builds & packages everything as an **electron** app for distribution/installation.
+
+Edit the build configuration in `package.json` (see the [electron-builder docs on build configuration](https://www.electron.build/configuration/configuration#configuration))
 
 ### `npm run start-react`
 
@@ -33,10 +32,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build-react`
 
-Builds *ONLY* the **react** app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds *ONLY* the **react** app for production to the `build` folder.
